@@ -1,0 +1,9 @@
+{
+  "name": "@t28/embedded-tweets-web-components",
+  "version": "0.1.0",
+  "description": "web components of unofficial embedded tweets",
+  "license": "MIT",
+  "author": "Tatsuya Yamamoto",
+  "scripts": {
+  }
+}
