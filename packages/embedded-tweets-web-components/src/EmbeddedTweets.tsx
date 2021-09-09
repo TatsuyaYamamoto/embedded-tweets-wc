@@ -1,7 +1,5 @@
 const EmbeddedTweets = () => {
-  return (
-    <div>embedded-tweets</div>
-  )
-}
+  return <div>embedded-tweets</div>;
+};
 
-export default EmbeddedTweets
+export default EmbeddedTweets;
