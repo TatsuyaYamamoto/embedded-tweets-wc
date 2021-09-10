@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>dev env for @t28/embedded-tweets-web-components</title>
+    <title>dev env for @t28/embedded-tweet-web-components</title>
   </head>
   <body>
     <script type="module" src="./src/index.ts"></script>
@@ -26,7 +26,7 @@
         ];
 
         for (const jsonData of jsonDataList) {
-          const tweet = document.createElement("embedded-tweets");
+          const tweet = document.createElement("embedded-tweet");
           tweet.setAttribute("tweet-json", jsonData);
 
           document.body.appendChild(tweet);

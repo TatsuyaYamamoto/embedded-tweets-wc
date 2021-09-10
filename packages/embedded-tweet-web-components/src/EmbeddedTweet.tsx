@@ -12,7 +12,7 @@ interface Props {
   ["tweet-json"]: string;
 }
 
-const EmbeddedTweets: FC<Props> = (props) => {
+const EmbeddedTweet: FC<Props> = (props) => {
   const tweetJson = props["tweet-json"];
 
   // TODO validation
@@ -91,4 +91,4 @@ const EmbeddedTweets: FC<Props> = (props) => {
   );
 };
 
-export default EmbeddedTweets;
+export default EmbeddedTweet;
