@@ -1,7 +1,6 @@
 import { FunctionComponent as FC } from "preact";
 import { useMemo } from "preact/compat";
-import autoLink from "twitter-text/dist/esm/autoLink";
-import type { UrlEntity } from "twitter-text";
+import twitterText, { UrlEntity } from "twitter-text";
 
 interface Props {
   text: string;
@@ -12,7 +11,7 @@ interface Props {
 
 const TweetText: FC<Props> = (props) => {
   const text = useMemo(() => {
-    let linkedText = autoLink(props.text, {
+    let linkedText = twitterText.autoLink(props.text, {
       urlEntities: props.entities.urls,
       targetBlank: true,
     });

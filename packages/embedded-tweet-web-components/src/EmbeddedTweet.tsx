@@ -21,9 +21,9 @@ const EmbeddedTweet: FC<Props> = (props) => {
   const tweetUrl = `https://twitter.com/${tweet.user.screen_name}/status/${tweet.id_str}`;
 
   useEffect(() => {
-    const onClickRoot = (e) => {
-      const isAnchorClick = e.path.find((el) => {
-        if (el.tagName === "A" && el.href) {
+    const onClickRoot = (e: MouseEvent) => {
+      const isAnchorClick = !!e.composedPath().find((el) => {
+        if (el instanceof HTMLAnchorElement) {
           return true;
         }
       });
@@ -31,9 +31,9 @@ const EmbeddedTweet: FC<Props> = (props) => {
         window.open(tweetUrl);
       }
     };
-    rootElRef.current.addEventListener("click", onClickRoot);
+    rootElRef.current?.addEventListener("click", onClickRoot);
     return () => {
-      rootElRef.current.removeEventListener("click", onClickRoot);
+      rootElRef.current?.removeEventListener("click", onClickRoot);
     };
   }, []);
 

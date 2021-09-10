@@ -1,14 +1,27 @@
 {
   "name": "@t28/embedded-tweet-web-components",
   "version": "0.1.0",
-  "description": "web components of unofficial embedded tweet",
+  "description": "unofficial web components of embedded tweet",
   "license": "MIT",
   "author": "Tatsuya Yamamoto",
+  "files": [
+    "dist"
+  ],
+  "main": "./dist/embedded-tweet-web-components.umd.js",
+  "module": "./dist/embedded-tweet-web-components.es.js",
+  "exports": {
+    ".": {
+      "import": "./dist/embedded-tweet-web-components.es.js",
+      "require": "./dist/embedded-tweet-web-components.umd.js"
+    }
+  },
   "scripts": {
-    "dev": "vite"
+    "dev": "vite",
+    "build": "tsc --noEmit && vite build"
   },
   "devDependencies": {
     "@preact/preset-vite": "^2.1.0",
+    "@types/preact-custom-element": "^4.0.1",
     "@types/twitter-text": "^3.1.1",
     "vite": "^2.5.6"
   },
