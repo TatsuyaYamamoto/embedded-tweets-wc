@@ -1,7 +1,7 @@
 {
-  "name": "t28-modules",
-  "private": true,
-  "version": "0.0.0",
+  "name": "embedded-tweets-wc",
+  "description": "unofficial web components of embedded tweets",
+  "version": "0.1.0",
   "license": "MIT",
   "author": "Tatsuya Yamamoto",
   "files": [
